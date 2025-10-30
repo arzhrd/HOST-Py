@@ -1,11 +1,11 @@
-# Simple program to add two numbers
+import streamlit as st
 
-# Taking input from the user
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+st.title("🔢 Simple Addition App")
 
-# Calculating the sum
-sum = num1 + num2
+# Take user inputs
+num1 = st.number_input("Enter first number:", value=0.0)
+num2 = st.number_input("Enter second number:", value=0.0)
 
-# Displaying the result
-print("The sum is:", sum)
+# Calculate and display result
+sum_result = num1 + num2
+st.success(f"The sum is: {sum_result}")
